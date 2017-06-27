@@ -1,0 +1,79 @@
+<!--Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>TOX 2020 Launching Soon </title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="" />
+<!-- font files -->
+<link href="//fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+<!-- /font files -->
+<!-- css files -->
+{% load staticfiles %}
+<link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css" media="all" />
+<!--<link href="https://drive.google.com/open?id=0B5aObC_fxmDnUFVDelZ6QU11X0U" rel="stylesheet" type="text/css" media="all" />-->
+<!-- /css files -->
+<script type="text/javascript" src="{% static 'js/jquery-2.1.4.min.js' %}"></script><!-- Supportive-JavaScript -->
+<!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<![endif]-->
+{% load staticfiles %}
+<body background ="{% static 'images/banner2.jpg' %}" >
+
+{% load staticfiles %}
+<div class="container demo-1">
+	<div class="content">
+        <div id="large-header" class="large-header">
+			<div class="w3ls-main-title">
+				<h1>TOX2020 is launching soon</h1>
+					<div class="demo2"></div>
+					<!--newsletter-->
+					<div class="w3layouts-newsletter">
+						{% ifequal success 1 %}
+						<h2> Thank you for your interest. Email id is noted in our system.</h2>
+						{% else %}
+						<div class="w3layouts-newsletter">
+						<h2>Subscribe! We will let you know once it is available</h2>
+
+						  <form action="" method="post"enctype="multipart/form-data">{% csrf_token %}
+							  <input type="email" name="email"  required="" placeholder="Email" />
+							  <input type="submit" value="Subscribe" />
+							  <div class="clear"></div>
+						  </form>
+						</div>
+						{% endifequal %}
+					</div>
+					<!--//newsletter -->
+					<!-- copyright -->
+					<p class="agile-copyright">© 2017 TOX2020 Launching Soon  All Rights Reserved</p>
+					<!-- //copyright -->
+			</div>
+            <canvas id="demo-canvas"></canvas>
+        </div>
+	</div>
+</div>	
+<!-- /main-section -->
+<!-- Counter required files -->
+    {% load staticfiles %}
+
+	<link rel='stylesheet' href="{% static 'css/dscountdown.css' %}" type='text/css' media='all' />
+<script type="text/javascript" src="{% static 'js/dscountdown.min.js' %}"></script>
+	<script>
+		jQuery(document).ready(function($){						
+			$('.demo2').dsCountDown({
+				endDate: new Date("July 5, 2017 23:59:00"),
+				theme: 'black'
+				});								
+		});
+	</script>
+<script src="{% static 'js/rAF.js' %}"></script>
+
+<script src= "{% static 'js/demo-2.js' %}"></script>
+
+</body>
+</html>
