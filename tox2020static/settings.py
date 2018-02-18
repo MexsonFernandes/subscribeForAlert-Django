@@ -125,7 +125,7 @@ USE_TZ = True
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'server1.rootdnsserver.com'
 EMAIL_HOST_USER = 'admin@tox2020.co.in'
-EMAIL_HOST_PASSWORD = 'Myaway123'
+EMAIL_HOST_PASSWORD = 'Password'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
